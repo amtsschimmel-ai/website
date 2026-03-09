@@ -55,6 +55,16 @@
             -webkit-font-smoothing: antialiased;
         }
 
+
+        /* ===== LUCIDE ICONS ===== */
+        svg.icon {
+            display: inline-block;
+            width: 1em; height: 1em;
+            fill: none; stroke: currentColor;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+            vertical-align: -0.125em; flex-shrink: 0;
+            overflow: visible;
+        }
         /* ===== NAV ===== */
         .nav {
             background: rgba(255,255,255,0.95);
@@ -125,7 +135,7 @@
         }
         .hero h1 {
             font-size: clamp(1.75rem, 3.8vw, 2.5rem);
-            font-weight: 800; line-height: 1.22;
+            font-weight: 700; line-height: 1.22;
             color: var(--blue-900); letter-spacing: -0.025em; margin-bottom: 20px;
         }
         .hero h1 em {
@@ -138,19 +148,20 @@
         }
         .hero-sub {
             font-size: 1.05rem; color: var(--slate-600);
+            font-weight: 500;
             max-width: 580px; margin: 0 auto 32px; line-height: 1.75;
         }
         .hero-cta {
             display: inline-flex; align-items: center; gap: 8px;
-            background: var(--blue-500); color: white;
+            background: #2F72E0; color: white;
             padding: 14px 30px; border-radius: var(--radius-md);
             font-weight: 700; font-size: 0.97rem; text-decoration: none;
-            box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+            box-shadow: 0 4px 16px rgba(47,114,224,0.28);
             transition: all 0.2s;
         }
         .hero-cta:hover {
-            background: var(--blue-600); transform: translateY(-1px);
-            box-shadow: 0 6px 22px rgba(37,99,235,0.35);
+            background: #2564c8; transform: translateY(-1px);
+            box-shadow: 0 6px 22px rgba(47,114,224,0.32);
         }
 
         /* ===== TRUST BAR ===== */
@@ -180,7 +191,7 @@
             padding: 14px 22px;
             font-size: 0.83rem; color: var(--blue-700); font-weight: 600;
         }
-        .trust-item span:first-child { font-size: 1rem; }
+        .trust-item .icon { font-size: 1rem; }
         .trust-divider {
             width: 1px; height: 22px;
             background: var(--blue-200); flex-shrink: 0;
@@ -363,7 +374,7 @@
             transition: box-shadow 0.2s, transform 0.2s;
         }
         .usecase-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-        .usecase-icon { font-size: 1.9rem; margin-bottom: 12px; }
+        .usecase-icon { font-size: 1.9rem; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; }
         .usecase-title { font-size: 0.95rem; font-weight: 700; color: var(--blue-900); margin-bottom: 7px; }
         .usecase-desc { font-size: 0.85rem; color: var(--slate-600); line-height: 1.65; margin-bottom: 12px; }
         .usecase-example {
@@ -381,7 +392,7 @@
             background: var(--white); border: 1px solid var(--slate-200);
             border-radius: var(--radius-md); padding: 18px; box-shadow: var(--shadow-sm);
         }
-        .benefit-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 1px; }
+        .benefit-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; color: var(--blue-600); }
         .benefit-title { font-size: 0.9rem; font-weight: 700; color: var(--blue-900); margin-bottom: 3px; }
         .benefit-desc { font-size: 0.82rem; color: var(--slate-600); line-height: 1.55; }
         .dsgvo-note {
@@ -404,9 +415,9 @@
         }
         .comp-table tr:nth-child(even) td { background: var(--slate-50); }
         .comp-table tr:last-child td { border-bottom: none; }
-        .check { color: var(--green-soft); font-weight: 700; }
+        .check { color: var(--green-soft); font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
         .cross { color: var(--red-700); font-weight: 700; }
-        .warn { color: var(--gold-500); font-weight: 700; }
+        .warn { color: var(--gold-500); font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
 
         /* ===== HOW IT WORKS ===== */
         .hiw-steps {
@@ -418,7 +429,7 @@
             width: 72px; height: 72px; margin: 0 auto 16px;
             background: var(--blue-100); border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 2rem;
+            font-size: 2rem; color: var(--blue-600);
         }
         .hiw-step-num {
             font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
@@ -575,6 +586,91 @@
 </head>
 <body>
 
+<!-- SVG ICON SPRITE (Lucide Icons, MIT) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-landmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/>
+    <path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/>
+  </symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+  </symbol>
+  <symbol id="icon-lock-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+  </symbol>
+  <symbol id="icon-coins" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/>
+    <path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/>
+  </symbol>
+  <symbol id="icon-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/>
+    <path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>
+  </symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>
+  </symbol>
+  <symbol id="icon-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/>
+  </symbol>
+  <symbol id="icon-circle-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+  </symbol>
+  <symbol id="icon-clipboard-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+    <path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>
+  </symbol>
+  <symbol id="icon-shield-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+    <path d="M12 8v4"/><path d="M12 16h.01"/>
+  </symbol>
+  <symbol id="icon-user-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+    <line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/>
+  </symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+  </symbol>
+  <symbol id="icon-refresh-cw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+    <path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>
+  </symbol>
+  <symbol id="icon-link-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/>
+  </symbol>
+  <symbol id="icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+  </symbol>
+  <symbol id="icon-lightbulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+    <path d="M9 18h6"/><path d="M10 22h4"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/>
+  </symbol>
+  <symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/>
+    <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/>
+    <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/>
+  </symbol>
+  <symbol id="icon-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22v-5"/><path d="M15 8V2"/>
+    <path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"/><path d="M9 8V2"/>
+  </symbol>
+  <symbol id="icon-triangle-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/>
+    <path d="M12 9v4"/><path d="M12 17h.01"/>
+  </symbol>
+  <symbol id="icon-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+    <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+  </symbol>
+  <symbol id="icon-cookie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+    <path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/>
+  </symbol>
+</svg>
+
 <!-- ============================================================ NAV -->
 <nav class="nav">
     <div class="nav-inner">
@@ -598,7 +694,7 @@
 <!-- ============================================================ HERO -->
 <section class="hero">
     <div class="hero-inner">
-        <div class="hero-eyebrow">🏛️ Für die öffentliche Verwaltung in Deutschland</div>
+        <div class="hero-eyebrow"><svg class="icon" aria-hidden="true"><use href="#icon-landmark"/></svg> Für die öffentliche Verwaltung in Deutschland</div>
         <h1>KI in der Verwaltung?<br>Nur wenn die Antworten stimmen.</h1>
         <p class="hero-sub">
             amtsschimmel.ai macht Satzungen, Gesetze und Verwaltungsvorschriften in jeder KI-Lösung
@@ -611,15 +707,15 @@
 <!-- ============================================================ TRUST BAR -->
 <div class="trust-bar">
     <div class="trust-bar-inner">
-        <div class="trust-item"><span>🔓</span> Open Source</div>
+        <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#icon-lock-open"/></svg> Open Source</div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span>💰</span> Kostenlos</div>
+        <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#icon-coins"/></svg> Kostenlos</div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span>📄</span> Quellensicher &amp; zitierfähig</div>
+        <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#icon-file-text"/></svg> Quellensicher &amp; zitierfähig</div>
         <div class="trust-divider"></div>
         <div class="trust-item"><span>🇩🇪</span> DSGVO-konform</div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span>🍪</span> Cookie-frei</div>
+        <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#icon-cookie"/></svg> Cookie-frei</div>
     </div>
 </div>
 
@@ -632,37 +728,37 @@
         </div>
         <div class="usecases-grid">
             <div class="usecase-card">
-                <div class="usecase-icon">🗂️</div>
+                <div class="usecase-icon"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg></div>
                 <div class="usecase-title">Sitzungen vorbereiten</div>
                 <div class="usecase-desc">Beschlussvorlagen, Tagesordnungspunkte und Sachinformationen – rechtssicher aufbereitet für Gemeinderat und Ausschüsse.</div>
                 <div class="usecase-example">„Welche Beschlüsse benötigt der Gemeinderat zur Aufstellung eines Bebauungsplans?"</div>
             </div>
             <div class="usecase-card">
-                <div class="usecase-icon">💬</div>
+                <div class="usecase-icon"><svg class="icon" aria-hidden="true"><use href="#icon-message-circle"/></svg></div>
                 <div class="usecase-title">Bürgeranfragen beantworten</div>
                 <div class="usecase-desc">Fundierte Auskunft zu Satzungen, Gebühren und Verfahren – direkt aus der Rechtsquelle, ohne langes Suchen.</div>
                 <div class="usecase-example">„Was kostet die Müllabfuhr für einen 120-Liter-Behälter?"</div>
             </div>
             <div class="usecase-card">
-                <div class="usecase-icon">✅</div>
+                <div class="usecase-icon"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></div>
                 <div class="usecase-title">Checklisten erstellen</div>
                 <div class="usecase-desc">Schritt-für-Schritt-Checklisten für typische Verwaltungsvorgänge – vollständig, rechtssicher und sofort einsatzbereit.</div>
                 <div class="usecase-example">„Erstelle eine Checkliste für die Vorbereitung einer Gemeinderatswahl."</div>
             </div>
             <div class="usecase-card">
-                <div class="usecase-icon">📋</div>
+                <div class="usecase-icon"><svg class="icon" aria-hidden="true"><use href="#icon-clipboard-list"/></svg></div>
                 <div class="usecase-title">Satzungen analysieren</div>
                 <div class="usecase-desc">Vergleich, Interpretation und Aktualisierungsbedarf kommunaler Satzungen auf einen Blick.</div>
                 <div class="usecase-example">„Entspricht unsere Abwassersatzung noch den aktuellen gesetzlichen Anforderungen?"</div>
             </div>
             <div class="usecase-card">
-                <div class="usecase-icon">🚒</div>
+                <div class="usecase-icon"><svg class="icon" aria-hidden="true"><use href="#icon-shield-alert"/></svg></div>
                 <div class="usecase-title">Termine vorbereiten</div>
                 <div class="usecase-desc">Vorbereitung von Hauptversammlungen, Führungswechseln und Regularien für Feuerwehren und kommunale Einrichtungen.</div>
                 <div class="usecase-example">„Was sind die gesetzlichen Pflichten des Kommandanten bei der Hauptversammlung der Feuerwehr?"</div>
             </div>
             <div class="usecase-card">
-                <div class="usecase-icon">👋</div>
+                <div class="usecase-icon"><svg class="icon" aria-hidden="true"><use href="#icon-user-plus"/></svg></div>
                 <div class="usecase-title">Neue Mitarbeitende einarbeiten</div>
                 <div class="usecase-desc">Rechtliche Grundlagen schnell und strukturiert vermitteln – quellensicher und nachvollziehbar.</div>
                 <div class="usecase-example">„Welche Gesetze regeln die Befugnisse der Bürgermeisterin?"</div>
@@ -680,42 +776,42 @@
         </div>
         <div class="benefits-grid">
             <div class="benefit-item">
-                <div class="benefit-icon">🔒</div>
+                <div class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg></div>
                 <div>
                     <div class="benefit-title">Keine Datenweitergabe</div>
                     <div class="benefit-desc">Anfragen und Bürgerdaten verlassen Ihre KI-Umgebung nicht. amtsschimmel.ai liefert ausschließlich Rechtstexte.</div>
                 </div>
             </div>
             <div class="benefit-item">
-                <div class="benefit-icon">🔄</div>
+                <div class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#icon-refresh-cw"/></svg></div>
                 <div>
                     <div class="benefit-title">Immer aktuelle Rechtsquellen</div>
                     <div class="benefit-desc">Die Wissensdatenbank wird laufend gepflegt – kein veraltetes Trainingswissen, sondern aktuelle Gesetzestexte.</div>
                 </div>
             </div>
             <div class="benefit-item">
-                <div class="benefit-icon">📎</div>
+                <div class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#icon-link-2"/></svg></div>
                 <div>
                     <div class="benefit-title">Zitierfähige Antworten</div>
                     <div class="benefit-desc">Jede Antwort enthält Paragraphenangabe und Quellenlink – prüfbar und dokumentierbar.</div>
                 </div>
             </div>
             <div class="benefit-item">
-                <div class="benefit-icon">💰</div>
+                <div class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#icon-coins"/></svg></div>
                 <div>
                     <div class="benefit-title">Kostenlos nutzbar</div>
                     <div class="benefit-desc">amtsschimmel.ai ist für alle Gemeinden, Behörden und Ehrenamtliche kostenlos zugänglich.</div>
                 </div>
             </div>
             <div class="benefit-item">
-                <div class="benefit-icon">🔓</div>
+                <div class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#icon-lock-open"/></svg></div>
                 <div>
                     <div class="benefit-title">Open Source</div>
                     <div class="benefit-desc">Die gesamte Technologie ist quelloffen. Transparenz, Prüfbarkeit und Mitgestaltung sind ausdrücklich erwünscht.</div>
                 </div>
             </div>
             <div class="benefit-item">
-                <div class="benefit-icon">🔌</div>
+                <div class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#icon-plug"/></svg></div>
                 <div>
                     <div class="benefit-title">Für jede KI-Lösung</div>
                     <div class="benefit-desc">ChatGPT, Claude, Langdock und alle weiteren MCP-fähigen Tools werden unterstützt – ohne Vendor-Lock-in.</div>
@@ -744,37 +840,37 @@
                 <tbody>
                     <tr>
                         <td>Aktuelle Gesetzestexte</td>
-                        <td><span class="check">✅</span> Stets aktuell gepflegt</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> Stets aktuell gepflegt</td>
                         <td><span class="cross">❌</span> Veraltetes Trainingswissen</td>
                     </tr>
                     <tr>
                         <td>Zitierfähige Quellenangaben</td>
-                        <td><span class="check">✅</span> Paragraphengenau</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> Paragraphengenau</td>
                         <td><span class="cross">❌</span> Keine Quellenangaben</td>
                     </tr>
                     <tr>
                         <td>Gemeindespezifische Satzungen</td>
-                        <td><span class="check">✅</span> Auf Anfrage verfügbar</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> Auf Anfrage verfügbar</td>
                         <td><span class="cross">❌</span> Nicht verfügbar</td>
                     </tr>
                     <tr>
                         <td>Kostenfrei nutzbar</td>
-                        <td><span class="check">✅</span> Ja</td>
-                        <td><span class="warn">⚠️</span> Je nach Anbieter</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> Ja</td>
+                        <td><span class="warn"><svg class="icon" aria-hidden="true"><use href="#icon-triangle-alert"/></svg></span> Je nach Anbieter</td>
                     </tr>
                     <tr>
                         <td>DSGVO-konform*</td>
-                        <td><span class="check">✅</span> Keine Datenweitergabe</td>
-                        <td><span class="warn">⚠️</span> Abhängig vom Anbieter</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> Keine Datenweitergabe</td>
+                        <td><span class="warn"><svg class="icon" aria-hidden="true"><use href="#icon-triangle-alert"/></svg></span> Abhängig vom Anbieter</td>
                     </tr>
                     <tr>
                         <td>Open Source</td>
-                        <td><span class="check">✅</span> MIT-Lizenz</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> MIT-Lizenz</td>
                         <td><span class="cross">❌</span> Meist proprietär</td>
                     </tr>
                     <tr>
                         <td>Halluzinationsrisiko</td>
-                        <td><span class="check">✅</span> Stark reduziert (Antworten aus Normtexten)</td>
+                        <td><span class="check"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></span> Stark reduziert (Antworten aus Normtexten)</td>
                         <td><span class="cross">❌</span> Hoch – Fakten können erfunden sein</td>
                     </tr>
                 </tbody>
@@ -791,13 +887,13 @@
         </div>
         <div class="hints-grid">
             <div class="setup-hint">
-                <strong>🛡️ Hinweis zur DSGVO-Konformität:</strong>
+                <strong><svg class="icon" aria-hidden="true"><use href="#icon-shield"/></svg> Hinweis zur DSGVO-Konformität:</strong>
                 amtsschimmel.ai überträgt ausschließlich Rechtstexte an das anfragende Sprachmodell.
                 Nutzeranfragen, Bürgerdaten und sonstige vertrauliche Inhalte verlassen Ihre KI-Umgebung
                 nicht und werden nicht an amtsschimmel.ai übermittelt.
             </div>
             <div class="setup-hint">
-                <strong>ℹ️ Hinweis zum Umfang:</strong>
+                <strong><svg class="icon" aria-hidden="true"><use href="#icon-info"/></svg> Hinweis zum Umfang:</strong>
                 amtsschimmel.ai ist ein junges Projekt – die Zahl der angebundenen Gemeinden und Bundesländer
                 wächst laufend. Falls Ihre Gemeinde oder Ihr Bundesland noch nicht hinterlegt sind, liefert
                 der Server Bundesrecht und – falls verfügbar – Landesrecht.<br><br>
@@ -805,7 +901,7 @@
                 <a href="mailto:kontakt@amtsschimmel.ai">kontakt@amtsschimmel.ai</a>
             </div>
             <div class="setup-hint">
-                <strong>🔐 Interne Daten &amp; Wissensartikel:</strong>
+                <strong><svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg> Interne Daten &amp; Wissensartikel:</strong>
                 Die Einbindung gemeindespezifischer interner Dokumente und Wissensartikel ist über eine
                 authentifizierte Erweiterung möglich. Für weitere Informationen ist eine Kontaktaufnahme
                 erforderlich: <a href="mailto:kontakt@amtsschimmel.ai">kontakt@amtsschimmel.ai</a>
@@ -857,11 +953,11 @@
                     <span class="field-label" style="display:block; margin-top:16px; margin-bottom:6px">Ihr MCP-Server-Link</span>
                     <div class="url-row">
                         <div class="url-box" id="generatedUrl">https://mcp.amtsschimmel.ai/mcp</div>
-                        <button class="copy-btn" id="copyBtn" onclick="copyUrl()">📋 Link kopieren</button>
+                        <button class="copy-btn" id="copyBtn" onclick="copyUrl()"><svg class="icon" aria-hidden="true"><use href="#icon-clipboard-list"/></svg> <span id="copyBtnText">Link kopieren</span></button>
                     </div>
                     
                     <div class="search-tip">
-                        💡 <strong>Wie binde ich den MCP-Server an meine KI an?</strong>
+                        <svg class="icon" aria-hidden="true"><use href="#icon-lightbulb"/></svg> <strong>Wie binde ich den MCP-Server an meine KI an?</strong>
                         Suchen Sie im Internet nach „<em>[Ihr KI-Tool] MCP Server einrichten</em>"
                         – Anleitungen gibt es für alle gängigen Tools. Eigene Schritt-für-Schritt-Anleitungen
                         für Claude, ChatGPT und Langdock folgen in Kürze auf amtsschimmel.ai.
@@ -882,7 +978,7 @@
                     <div class="prompt-box" id="promptBox"></div>
                     <div class="prompt-actions">
                         <button class="copy-prompt-btn" id="copyPromptBtn" onclick="copyPrompt()">
-                            <span id="cpIcon">📋</span>
+                            <span id="cpIcon"><svg class="icon" aria-hidden="true"><use href="#icon-clipboard-list"/></svg></span>
                             <span id="cpText">Masterprompt kopieren</span>
                         </button>
                         <span class="prompt-note">
@@ -912,7 +1008,7 @@
                     <div class="step3-example">
                         <div class="step3-example-label">Beispiel-Anfrage</div>
                         <p>„Wie verteilen sich die Aufgaben zwischen Gemeinde und Schulleitung an einer Gemeinschaftsschule – und wer ist für die Schülerbetreuung zuständig?"</p>
-                        <div class="step3-source">📄 Antwort mit Quellen: SchG BW §§ 28, 41, 48 + Satzung Schülerbetreuung</div>
+                        <div class="step3-source"><svg class="icon" aria-hidden="true"><use href="#icon-file-text"/></svg> Antwort mit Quellen: SchG BW §§ 28, 41, 48 + Satzung Schülerbetreuung</div>
                     </div>
                 </div>
             </div>
@@ -930,21 +1026,21 @@
         </div>
         <div class="hiw-steps">
             <div class="hiw-step">
-                <div class="hiw-icon-wrap">💬</div>
+                <div class="hiw-icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-message-circle"/></svg></div>
                 <div class="hiw-step-num">Schritt 1</div>
                 <div class="hiw-step-title">Frage stellen</div>
                 <div class="hiw-step-desc">Sie fragen Ihre KI wie gewohnt auf Deutsch – kein spezieller Befehl nötig.</div>
             </div>
             <div class="hiw-arrow">→</div>
             <div class="hiw-step">
-                <div class="hiw-icon-wrap">🔍</div>
+                <div class="hiw-icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg></div>
                 <div class="hiw-step-num">Schritt 2</div>
                 <div class="hiw-step-title">Quellen laden</div>
                 <div class="hiw-step-desc">Die KI ruft automatisch die passenden Gesetze und Satzungen aus der amtsschimmel.ai-Datenbank ab.</div>
             </div>
             <div class="hiw-arrow">→</div>
             <div class="hiw-step">
-                <div class="hiw-icon-wrap">✅</div>
+                <div class="hiw-icon-wrap"><svg class="icon" aria-hidden="true"><use href="#icon-circle-check"/></svg></div>
                 <div class="hiw-step-num">Schritt 3</div>
                 <div class="hiw-step-title">Antwort erhalten</div>
                 <div class="hiw-step-desc">Sie erhalten eine fundierte Antwort mit Paragraphenangabe und direktem Link zur Quelle.</div>
@@ -960,7 +1056,7 @@
             <h2>Über amtsschimmel.ai</h2>
         </div>
         <div class="about-content" style="margin: 0 auto; text-align: center;">
-            <div class="about-tag">🔓 Open-Source-Projekt</div>
+            <div class="about-tag"><svg class="icon" aria-hidden="true"><use href="#icon-lock-open"/></svg> Open-Source-Projekt</div>
             <p>
                 amtsschimmel.ai ist ein Open-Source-Projekt: Jeder darf es nutzen und daran mitarbeiten.
                 Die Idee entstand aus der Grundfrage, wie Freiwillige Feuerwehren der zunehmenden Komplexität
@@ -988,10 +1084,10 @@
         </div>
         <div class="tech-content">
             <div class="tech-badge-row">
-                <div class="tech-badge">🏗️ Hierarchisches Context Retrieval</div>
+                <div class="tech-badge"><svg class="icon" aria-hidden="true"><use href="#icon-layers"/></svg> Hierarchisches Context Retrieval</div>
                 <div class="tech-badge">🇩🇪 Made in Germany</div>
-                <div class="tech-badge">🔓 Open Source – MIT-Lizenz</div>
-                <div class="tech-badge">🔌 Jede KI via MCP-Standard</div>
+                <div class="tech-badge"><svg class="icon" aria-hidden="true"><use href="#icon-lock-open"/></svg> Open Source – MIT-Lizenz</div>
+                <div class="tech-badge"><svg class="icon" aria-hidden="true"><use href="#icon-plug"/></svg> Jede KI via MCP-Standard</div>
             </div>
             <p class="tech-desc">
                 RAGSource kommuniziert via <strong>MCP</strong> direkt mit Ihrem KI-Tool – ohne Middleware,
@@ -1064,11 +1160,11 @@
 // LEVEL-LABELS
 // ============================================================
 const LEVEL_LABEL = {
-    land:       "🏛️ Bundesland",
+    land:       "Bundesland",
     kreis:      "📍 Landkreis",
     kreisfrei:  "🏙️ Kreisfreie Stadt",
     verband:    "🔗 Gemeindeverbund",
-    gemeinde:   "🏠 Gemeinde"
+    gemeinde:   "Gemeinde"
 };
 
 // ARS-Daten lazy-loaded beim ersten Fokus auf das Suchfeld
@@ -1285,7 +1381,6 @@ function updateUrl() {
     el.textContent = url;
     el.dataset.url = url;
     document.getElementById('copyBtn').classList.remove('copied');
-    document.getElementById('copyBtn').textContent = '📋 Link kopieren';
 }
 
 function copyUrl() {
@@ -1293,8 +1388,9 @@ function copyUrl() {
              || document.getElementById('generatedUrl').textContent;
     navigator.clipboard.writeText(url).then(() => {
         const btn = document.getElementById('copyBtn');
-        btn.classList.add('copied'); btn.textContent = '✓ Kopiert!';
-        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '📋 Link kopieren'; }, 2500);
+        const btnText = document.getElementById('copyBtnText');
+        btn.classList.add('copied'); btnText.textContent = '✓ Kopiert!';
+        setTimeout(() => { btn.classList.remove('copied'); btnText.textContent = 'Link kopieren'; }, 2500);
     });
 }
 
@@ -1311,7 +1407,7 @@ function copyPrompt() {
         document.getElementById('cpText').textContent = 'Kopiert!';
         setTimeout(() => {
             btn.classList.remove('copied');
-            document.getElementById('cpIcon').textContent = '📋';
+            document.getElementById('cpIcon').innerHTML = '<svg class=\"icon\" aria-hidden=\"true\"><use href=\"#icon-clipboard-list\"/></svg>';
             document.getElementById('cpText').textContent = 'Masterprompt kopieren';
         }, 2500);
     });
