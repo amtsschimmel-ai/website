@@ -293,12 +293,12 @@
         .copy-btn.copied { background: var(--green-soft); }
         .setup-hint {
             margin-top: 14px; padding: 12px 16px;
-            background: var(--red-100); border: 1px solid #fca5a5;
+            background: var(--blue-50); border: 1px solid var(--blue-200);
             border-radius: var(--radius-md);
-            font-size: 0.82rem; color: var(--red-700); line-height: 1.6;
+            font-size: 0.82rem; color: var(--blue-800); line-height: 1.6;
         }
-        .setup-hint strong { display: block; margin-bottom: 4px; font-size: 0.85rem; }
-        .setup-hint a { color: var(--red-700); font-weight: 600; }
+        .setup-hint strong { display: block; margin-bottom: 4px; font-size: 0.85rem; color: var(--blue-900); }
+        .setup-hint a { color: var(--blue-600); font-weight: 600; }
         .search-tip {
             margin-top: 10px; font-size: 0.78rem; color: var(--slate-500);
             background: var(--slate-50); border: 1px solid var(--slate-200);
@@ -565,8 +565,7 @@
 <nav class="nav">
     <div class="nav-inner">
         <a href="#" class="logo">
-            <div class="logo-icon">A</div>
-            <div class="logo-text">amtsschimmel<span>.ai</span></div>
+            <div class="logo-text" style="font-size:1.1rem">amtsschimmel<span>.ai</span></div>
         </a>
         <nav class="nav-center">
             <a href="#einrichten" class="nav-link">Einrichten</a>
@@ -589,8 +588,7 @@
         <h1>Ihr gesamtes Verwaltungswissen.<br><em>Quellensicher</em> in jeder KI.</h1>
         <p class="hero-sub">
             amtsschimmel.ai macht Satzungen, Gesetze und Verwaltungsvorschriften in jeder KI-Lösung
-            zitierfähig verfügbar – von ChatGPT über Claude bis Langdock.
-            Kostenlos. Technik Open Source. In 5 Minuten einsatzbereit.
+            zitierfähig verfügbar. Kostenlos. Open Source. In 5 Minuten einsatzbereit.
         </p>
         <a href="#einrichten" class="hero-cta">Jetzt einrichten →</a>
     </div>
@@ -599,15 +597,20 @@
 <!-- ============================================================ TRUST BAR -->
 <div class="trust-bar">
     <div class="trust-bar-inner">
-        <div class="trust-item"><span>🔓</span> Open Source Technologie</div>
+        <div class="trust-item"><span>🔓</span> Open Source</div>
         <div class="trust-divider"></div>
-        <div class="trust-item"><span>🔗</span> Jedes LLM kompatibel</div>
+        <div class="trust-item"><span>💰</span> Kostenlos</div>
         <div class="trust-divider"></div>
         <div class="trust-item"><span>📄</span> Quellensicher &amp; zitierfähig</div>
         <div class="trust-divider"></div>
         <div class="trust-item"><span>🇩🇪</span> DSGVO-konform*</div>
-        <div class="trust-divider"></div>
-        <div class="trust-item"><span>⚡</span> 5 Minuten Setup</div>
+    </div>
+</div>
+
+<!-- DSGVO-NOTE -->
+<div style="max-width:1000px; margin:0 auto; padding:14px 24px 0;">
+    <div class="dsgvo-note">
+        * <strong>Hinweis zur DSGVO-Konformität:</strong> amtsschimmel.ai überträgt ausschließlich Rechtstexte an das anfragende Sprachmodell. Nutzeranfragen, Bürgerdaten und sonstige vertrauliche Inhalte verlassen Ihre KI-Umgebung nicht und werden nicht an amtsschimmel.ai übermittelt. Die Nutzung von Cloud-basierten KI-Diensten (z. B. ChatGPT, Claude) ist von Ihrer eigenen Datenschutzprüfung abhängig.
     </div>
 </div>
 
@@ -615,7 +618,7 @@
 <section id="einrichten" class="section">
     <div class="section-inner">
         <div class="section-header">
-            <h2>In 3 Schritten einrichten</h2>
+            <h2>In 3 einfachen Schritten einrichten</h2>
             <p>Kostenlos. Ohne Registrierung. In 5 Minuten einsatzbereit.</p>
         </div>
         <div class="setup-cards">
@@ -657,18 +660,18 @@
                         <button class="copy-btn" id="copyBtn" onclick="copyUrl()">📋 Link kopieren</button>
                     </div>
                     <div class="setup-hint">
-                        <strong>⚠️ Wichtig: Ihre Gemeinde muss in amtsschimmel.ai hinterlegt sein.</strong>
-                        Derzeit sind nur ausgewählte Gemeinden und Bundesländer eingetragen. Ohne Eintrag
-                        werden nur allgemeine Bundesgesetze und Landesgesetze BW abgerufen –
-                        keine gemeindespezifischen Satzungen.<br><br>
-                        Kostenlose Aufnahme Ihrer Gemeinde anfragen:
-                        <a href="mailto:hallo@amtsschimmel.ai">hallo@amtsschimmel.ai</a>
+                        <strong>ℹ️ Hinweis zum Umfang:</strong>
+                        Für Gemeinden, die noch nicht an amtsschimmel.ai angebunden sind, liefert der Server
+                        Bundesrecht und – falls verfügbar – Landesrecht. Gemeindespezifische Satzungen werden
+                        erst nach Aufnahme der Gemeinde verfügbar.<br><br>
+                        Infos zur Aufnahme Ihrer Gemeinde:
+                        <a href="mailto:kontakt@amtsschimmel.ai">kontakt@amtsschimmel.ai</a>
                     </div>
                     <div class="search-tip">
-                        💡 <strong>Wie trage ich einen MCP-Server ein?</strong>
-                        Suchen Sie in Ihrem KI-Tool nach „MCP Server hinzufügen", „Integration" oder „Konnektor".
-                        Eine Schritt-für-Schritt-Anleitung finden Sie, wenn Sie nach
-                        „<em>[Ihr KI-Tool] MCP Server einrichten</em>" suchen.
+                        💡 <strong>Wie binde ich den MCP-Server an meine KI an?</strong>
+                        Suchen Sie im Internet nach „<em>[Ihr KI-Tool] MCP Server einrichten</em>"
+                        – Anleitungen gibt es für alle gängigen Tools. Eigene Schritt-für-Schritt-Anleitungen
+                        für Claude, ChatGPT und Langdock folgen in Kürze auf amtsschimmel.ai.
                     </div>
                 </div>
             </div>
@@ -690,8 +693,8 @@
                             <span id="cpText">Masterprompt kopieren</span>
                         </button>
                         <span class="prompt-note">
-                            Bei MCP-fähigen Clients (z. B. Claude Desktop) wird ein Basisprompt
-                            automatisch geliefert – dieser ausführliche Prompt ist für Assistenten/Projekte empfohlen.
+                            Diesen Prompt als Systemprompt eintragen: in Claude als Projekt-Systemanweisung,
+                            in ChatGPT als Custom Instructions, in Langdock als Assistenten-Systemprompt.
                         </span>
                     </div>
                 </div>
@@ -746,10 +749,10 @@
                 <div class="usecase-example">„Was kostet die Müllabfuhr für einen 120-Liter-Behälter?"</div>
             </div>
             <div class="usecase-card">
-                <div class="usecase-icon">💰</div>
-                <div class="usecase-title">Fördermittel prüfen</div>
-                <div class="usecase-desc">Überblick über aktuelle Förderprogramme, Antragsvoraussetzungen und relevante Fristen.</div>
-                <div class="usecase-example">„Welche Förderungen gibt es für die energetische Sanierung des Rathauses?"</div>
+                <div class="usecase-icon">✅</div>
+                <div class="usecase-title">Checklisten erstellen</div>
+                <div class="usecase-desc">Schritt-für-Schritt-Checklisten für typische Verwaltungsvorgänge – vollständig, rechtssicher und sofort einsatzbereit.</div>
+                <div class="usecase-example">„Erstelle eine Checkliste für die Vorbereitung einer Gemeinderatswahl."</div>
             </div>
             <div class="usecase-card">
                 <div class="usecase-icon">📋</div>
@@ -824,9 +827,6 @@
                 </div>
             </div>
         </div>
-        <div class="dsgvo-note">
-            * <strong>Hinweis zur DSGVO-Konformität:</strong> amtsschimmel.ai überträgt ausschließlich Rechtstexte an das anfragende Sprachmodell. Nutzeranfragen, Bürgerdaten und sonstige vertrauliche Inhalte verlassen Ihre KI-Umgebung nicht und werden nicht an amtsschimmel.ai übermittelt. Die Nutzung von Cloud-basierten KI-Diensten (z. B. ChatGPT, Claude) ist von Ihrer eigenen Datenschutzprüfung abhängig.
-        </div>
     </div>
 </section>
 
@@ -877,6 +877,11 @@
                         <td><span class="check">✅</span> MIT-Lizenz</td>
                         <td><span class="cross">❌</span> Meist proprietär</td>
                     </tr>
+                    <tr>
+                        <td>Halluzinationsrisiko</td>
+                        <td><span class="check">✅</span> Stark reduziert (Antworten aus Normtexten)</td>
+                        <td><span class="cross">❌</span> Hoch – Fakten können erfunden sein</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -915,44 +920,8 @@
     </div>
 </section>
 
-<!-- ============================================================ FÜR WEN? -->
-<section id="fuer-wen" class="section section-gray">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Für wen ist amtsschimmel.ai?</h2>
-            <p>Für alle, die mit Verwaltungswissen arbeiten – haupt- und ehrenamtlich.</p>
-        </div>
-        <div class="persona-grid">
-            <div class="persona-card">
-                <div class="persona-icon">👔</div>
-                <div class="persona-title">Bürgermeister:innen</div>
-                <div class="persona-desc">Entscheidungsorientiertes Briefing: Kernaussage zuerst, rechtliche Grundlagen dahinter, Handlungsoptionen am Ende.</div>
-                <div class="persona-example">„Darf die Gemeinde das Grundstück direkt vergeben oder muss ausgeschrieben werden?"</div>
-            </div>
-            <div class="persona-card">
-                <div class="persona-icon">🏛️</div>
-                <div class="persona-title">Gemeinderät:innen</div>
-                <div class="persona-desc">Komplexe Beschlussvorlagen verständlich erklärt – mit Rechtsgrundlage, ohne Fachchinesisch.</div>
-                <div class="persona-example">„Was bedeutet der Beschluss zur Änderung des Bebauungsplans für die Anlieger?"</div>
-            </div>
-            <div class="persona-card">
-                <div class="persona-icon">💼</div>
-                <div class="persona-title">Verwaltungsmitarbeiter:innen</div>
-                <div class="persona-desc">Schnelle Antworten im Tagesgeschäft – ohne langes Suchen in Paragrafen-Dschungeln.</div>
-                <div class="persona-example">„Welche Fristen gelten bei der Bearbeitung eines Widerspruchs?"</div>
-            </div>
-            <div class="persona-card">
-                <div class="persona-icon">🚒</div>
-                <div class="persona-title">Ehrenamtliche</div>
-                <div class="persona-desc">Feuerwehrkommandant:innen, Vereinsvorstände und kommunale Gremien – rechtssicheres Wissen für das Ehrenamt.</div>
-                <div class="persona-example">„Welche Versicherungspflichten hat der Kommandant gegenüber der Feuerwehr?"</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- ============================================================ ÜBER UNS -->
-<section id="ueber-uns" class="section">
+<section id="ueber-uns" class="section section-gray">
     <div class="section-inner">
         <div class="section-header">
             <h2>Über amtsschimmel.ai</h2>
@@ -975,7 +944,7 @@
 </section>
 
 <!-- ============================================================ TECHNOLOGIE -->
-<section id="technologie" class="section section-gray">
+<section id="technologie" class="section">
     <div class="section-inner">
         <div class="section-header">
             <h2>Technologie</h2>
@@ -990,9 +959,8 @@
                 <div class="tech-badge">🗄️ SQLite FTS5</div>
             </div>
             <p class="tech-desc">
-                Der Wissensserver kommuniziert via <strong>MCP (Model Context Protocol)</strong> direkt mit Ihrem KI-Tool.
-                Die Rechtsquelldatenbank enthält über 80 konsolidierte Gesetze und Satzungen auf §-Ebene –
-                strukturiert, aktuell und zitierfähig. Powered by <a href="https://ragsource.ai" target="_blank" rel="noopener" class="tech-link">RAGSource</a>.
+                Der Wissensserver kommuniziert via <strong>MCP (Model Context Protocol)</strong> direkt mit Ihrem KI-Tool –
+                ohne Middleware, ohne Datenweitergabe. Powered by <a href="https://ragsource.ai" target="_blank" rel="noopener" class="tech-link">RAGSource</a>.
             </p>
         </div>
     </div>
@@ -1005,7 +973,7 @@
             <div class="cta-title">Bereit, Ihre Verwaltung zu entlasten?</div>
             <p class="cta-sub">
                 Kostenlos. Ohne Registrierung. In 5 Minuten einsatzbereit.<br>
-                Fragen? <a href="mailto:hallo@amtsschimmel.ai" style="color:var(--gold-300); font-weight:600;">hallo@amtsschimmel.ai</a>
+                Fragen? <a href="mailto:kontakt@amtsschimmel.ai" style="color:var(--gold-300); font-weight:600;">kontakt@amtsschimmel.ai</a>
             </p>
             <a href="#einrichten" class="cta-btn">Jetzt einrichten →</a>
         </div>
@@ -1021,7 +989,7 @@
                 Christian Traub<br>
                 Hauptstraße 71<br>
                 73087 Bad Boll<br><br>
-                E-Mail: <a href="mailto:hallo@amtsschimmel.ai">hallo@amtsschimmel.ai</a>
+                E-Mail: <a href="mailto:kontakt@amtsschimmel.ai">kontakt@amtsschimmel.ai</a>
             </p>
         </div>
         <div>
@@ -1047,7 +1015,7 @@
         <span>© 2026 amtsschimmel.ai · Christian Traub · Hauptstraße 71, 73087 Bad Boll</span>
         <span>
             <a href="#impressum">Impressum</a> ·
-            <a href="mailto:hallo@amtsschimmel.ai">Kontakt</a> ·
+            <a href="mailto:kontakt@amtsschimmel.ai">Kontakt</a> ·
             Powered by <a href="https://ragsource.ai" target="_blank" rel="noopener">RAGSource</a>
         </span>
     </div>
@@ -1060,29 +1028,132 @@
 // Erweiterbar: weitere Einträge hier hinzufügen
 // ============================================================
 const LEVEL_LABEL = {
-    land:     "🏛️ Bundesland",
-    kreis:    "📍 Landkreis",
-    verband:  "🔗 Gemeindeverbund",
-    gemeinde: "🏠 Gemeinde"
+    land:       "🏛️ Bundesland",
+    kreis:      "📍 Landkreis",
+    kreisfrei:  "🏙️ Kreisfreie Stadt",
+    verband:    "🔗 Gemeindeverbund",
+    gemeinde:   "🏠 Gemeinde"
 };
 
+// Hinweis: BW-Landkreise + 16 Bundesländer + kreisfreie Städte (Stand 2026).
+// Vollständige Gemeindeliste folgt – ARS-Code kann auch direkt eingegeben werden.
 const ARS_DATA = [
-    // Länder
-    { name: "Baden-Württemberg", ars: "08",           level: "land",
-      search: ["bw", "badenwürttemberg", "badenwuerttemberg", "bundesland"] },
-    // Landkreise
-    { name: "Landkreis Göppingen", ars: "08117",      level: "kreis",
-      search: ["göppingen", "goeppingen", "gp", "lkr göppingen", "landkreis göppingen"] },
-    // Verbände
-    { name: "GVV Raum Bad Boll", ars: "081175009",    level: "verband",
-      search: ["gvv bad boll", "gvv-bad-boll", "gemeindeverbund bad boll", "raum bad boll"] },
-    // Gemeinden
-    { name: "Bad Boll",      ars: "081175009012", level: "gemeinde", search: ["bad boll", "badboll"] },
-    { name: "Aichelberg",    ars: "081175009002", level: "gemeinde", search: ["aichelberg", "aichelb"] },
-    { name: "Dürnau",        ars: "081175009017", level: "gemeinde", search: ["dürnau", "duernau"] },
-    { name: "Gammelshausen", ars: "081175009023", level: "gemeinde", search: ["gammelshausen"] },
-    { name: "Hattenhofen",   ars: "081175009029", level: "gemeinde", search: ["hattenhofen"] },
-    { name: "Zell u.A.",     ars: "081175009060", level: "gemeinde", search: ["zell", "zell ua", "zell u.a.", "zell unter aichelberg"] },
+    // ─── BUNDESLÄNDER ─────────────────────────────────────────
+    { name: "Baden-Württemberg",      ars: "08", level: "land", search: ["bw","badenwuerttemberg","badenwürttemberg"] },
+    { name: "Bayern",                 ars: "09", level: "land", search: ["by","freistaat","freistaat bayern"] },
+    { name: "Berlin",                 ars: "11", level: "land", search: ["be"] },
+    { name: "Brandenburg",            ars: "12", level: "land", search: ["bb"] },
+    { name: "Bremen",                 ars: "04", level: "land", search: ["hb","hansestadt"] },
+    { name: "Hamburg",                ars: "02", level: "land", search: ["hh"] },
+    { name: "Hessen",                 ars: "06", level: "land", search: ["he"] },
+    { name: "Mecklenburg-Vorpommern", ars: "13", level: "land", search: ["mv","mecklenburg","vorpommern"] },
+    { name: "Niedersachsen",          ars: "03", level: "land", search: ["ni","nds"] },
+    { name: "Nordrhein-Westfalen",    ars: "05", level: "land", search: ["nrw","nordrhein","westfalen"] },
+    { name: "Rheinland-Pfalz",        ars: "07", level: "land", search: ["rp","rlp","rheinland"] },
+    { name: "Saarland",               ars: "10", level: "land", search: ["sl"] },
+    { name: "Sachsen",                ars: "14", level: "land", search: ["sn","freistaat sachsen"] },
+    { name: "Sachsen-Anhalt",         ars: "15", level: "land", search: ["st","sachsenanhalt"] },
+    { name: "Schleswig-Holstein",     ars: "01", level: "land", search: ["sh"] },
+    { name: "Thüringen",              ars: "16", level: "land", search: ["th","thueringen","freistaat thüringen"] },
+    // ─── BW: KREISFREIE STÄDTE ─────────────────────────────────
+    { name: "Stuttgart",          ars: "08111", level: "kreisfrei", search: ["lhs","landeshauptstadt"] },
+    { name: "Heilbronn, Stadt",   ars: "08121", level: "kreisfrei", search: [] },
+    { name: "Baden-Baden",        ars: "08211", level: "kreisfrei", search: ["badenbaden"] },
+    { name: "Karlsruhe",          ars: "08212", level: "kreisfrei", search: ["ka"] },
+    { name: "Heidelberg",         ars: "08221", level: "kreisfrei", search: ["hd"] },
+    { name: "Mannheim",           ars: "08222", level: "kreisfrei", search: ["ma"] },
+    { name: "Pforzheim",          ars: "08231", level: "kreisfrei", search: [] },
+    { name: "Freiburg im Breisgau", ars: "08311", level: "kreisfrei", search: ["fr","freiburg"] },
+    { name: "Ulm, Stadt",         ars: "08421", level: "kreisfrei", search: [] },
+    // ─── BW: LANDKREISE – Reg.bez. Stuttgart (081xx) ────────────
+    { name: "Böblingen",          ars: "08115", level: "kreis", search: ["bob","boeblingen"] },
+    { name: "Esslingen",          ars: "08116", level: "kreis", search: ["es"] },
+    { name: "Göppingen",          ars: "08117", level: "kreis", search: ["gp","goeppingen"] },
+    { name: "Ludwigsburg",        ars: "08118", level: "kreis", search: ["lb"] },
+    { name: "Rems-Murr-Kreis",    ars: "08119", level: "kreis", search: ["rems","murr","waiblingen","backnang"] },
+    { name: "Heilbronn",          ars: "08125", level: "kreis", search: [] },
+    { name: "Hohenlohekreis",     ars: "08126", level: "kreis", search: ["hohenlohe","oehringen","öhringen"] },
+    { name: "Schwäbisch Hall",    ars: "08127", level: "kreis", search: ["sha","schwaebisch hall"] },
+    { name: "Main-Tauber-Kreis",  ars: "08128", level: "kreis", search: ["tauberbischofsheim","main-tauber"] },
+    { name: "Heidenheim",         ars: "08135", level: "kreis", search: ["hdh"] },
+    { name: "Ostalbkreis",        ars: "08136", level: "kreis", search: ["ostalb","aalen","ellwangen","gmünd","gmuend"] },
+    // ─── BW: LANDKREISE – Reg.bez. Karlsruhe (082xx) ────────────
+    { name: "Karlsruhe (Landkreis)", ars: "08215", level: "kreis", search: ["landkreis karlsruhe"] },
+    { name: "Rastatt",               ars: "08216", level: "kreis", search: [] },
+    { name: "Neckar-Odenwald-Kreis", ars: "08225", level: "kreis", search: ["mosbach","buchen","neckar-odenwald"] },
+    { name: "Rhein-Neckar-Kreis",    ars: "08226", level: "kreis", search: ["wiesloch","sinsheim","rhein-neckar"] },
+    { name: "Calw",                  ars: "08235", level: "kreis", search: [] },
+    { name: "Enzkreis",              ars: "08236", level: "kreis", search: ["muehlacker","mühlacker"] },
+    { name: "Freudenstadt",          ars: "08237", level: "kreis", search: [] },
+    // ─── BW: LANDKREISE – Reg.bez. Freiburg (083xx) ─────────────
+    { name: "Breisgau-Hochschwarzwald", ars: "08315", level: "kreis", search: ["breisgau","hochschwarzwald","staufen"] },
+    { name: "Emmendingen",              ars: "08316", level: "kreis", search: ["em"] },
+    { name: "Ortenaukreis",             ars: "08317", level: "kreis", search: ["offenburg","lahr","kehl","ortenau"] },
+    { name: "Rottweil",                 ars: "08325", level: "kreis", search: [] },
+    { name: "Schwarzwald-Baar-Kreis",   ars: "08326", level: "kreis", search: ["villingen","schwenningen","vs"] },
+    { name: "Tuttlingen",               ars: "08327", level: "kreis", search: ["ttl"] },
+    { name: "Konstanz",                 ars: "08335", level: "kreis", search: ["singen","radolfzell"] },
+    { name: "Lörrach",                  ars: "08336", level: "kreis", search: ["loerrach"] },
+    { name: "Waldshut",                 ars: "08337", level: "kreis", search: [] },
+    // ─── BW: LANDKREISE – Reg.bez. Tübingen (084xx) ─────────────
+    { name: "Reutlingen",      ars: "08415", level: "kreis", search: ["rt"] },
+    { name: "Tübingen",        ars: "08416", level: "kreis", search: ["tue","tüb","tuebingen"] },
+    { name: "Zollernalbkreis", ars: "08417", level: "kreis", search: ["balingen","albstadt","zollern"] },
+    { name: "Alb-Donau-Kreis", ars: "08425", level: "kreis", search: ["ehingen","laupheim","alb-donau"] },
+    { name: "Biberach",        ars: "08426", level: "kreis", search: ["bc"] },
+    { name: "Bodenseekreis",   ars: "08427", level: "kreis", search: ["friedrichshafen","fn","bodensee"] },
+    { name: "Ravensburg",      ars: "08428", level: "kreis", search: ["rv","weingarten"] },
+    { name: "Sigmaringen",     ars: "08435", level: "kreis", search: [] },
+    // ─── GVV BAD BOLL ──────────────────────────────────────────
+    { name: "GVV Raum Bad Boll", ars: "081175009",    level: "verband",  search: ["gvv","gemeindeverbund bad boll"] },
+    { name: "Bad Boll",          ars: "081175009012", level: "gemeinde", search: ["badboll"] },
+    { name: "Aichelberg",        ars: "081175009002", level: "gemeinde", search: ["aichelb"] },
+    { name: "Dürnau",            ars: "081175009017", level: "gemeinde", search: ["duernau"] },
+    { name: "Gammelshausen",     ars: "081175009023", level: "gemeinde", search: [] },
+    { name: "Hattenhofen",       ars: "081175009029", level: "gemeinde", search: [] },
+    { name: "Zell u.A.",         ars: "081175009060", level: "gemeinde", search: ["zell ua","zell unter aichelberg"] },
+    // ─── KREISFREIE STÄDTE – Bayern ────────────────────────────
+    { name: "München",    ars: "09162", level: "kreisfrei", search: ["muenchen","by"] },
+    { name: "Nürnberg",   ars: "09564", level: "kreisfrei", search: ["nuernberg","nbg"] },
+    { name: "Augsburg",   ars: "09761", level: "kreisfrei", search: [] },
+    { name: "Würzburg",   ars: "09663", level: "kreisfrei", search: ["wuerzburg","wue"] },
+    { name: "Ingolstadt", ars: "09161", level: "kreisfrei", search: [] },
+    { name: "Erlangen",   ars: "09562", level: "kreisfrei", search: [] },
+    { name: "Fürth",      ars: "09563", level: "kreisfrei", search: ["fuerth"] },
+    // ─── KREISFREIE STÄDTE – Nordrhein-Westfalen ────────────────
+    { name: "Köln",        ars: "05315", level: "kreisfrei", search: ["koeln"] },
+    { name: "Düsseldorf",  ars: "05111", level: "kreisfrei", search: ["duesseldorf"] },
+    { name: "Dortmund",    ars: "05913", level: "kreisfrei", search: [] },
+    { name: "Essen",       ars: "05113", level: "kreisfrei", search: [] },
+    { name: "Duisburg",    ars: "05112", level: "kreisfrei", search: [] },
+    { name: "Bochum",      ars: "05911", level: "kreisfrei", search: [] },
+    { name: "Wuppertal",   ars: "05124", level: "kreisfrei", search: [] },
+    { name: "Bielefeld",   ars: "05711", level: "kreisfrei", search: ["bi"] },
+    { name: "Bonn",        ars: "05314", level: "kreisfrei", search: ["bn"] },
+    { name: "Münster",     ars: "05515", level: "kreisfrei", search: ["ms"] },
+    // ─── KREISFREIE STÄDTE – Hessen ────────────────────────────
+    { name: "Frankfurt am Main", ars: "06412", level: "kreisfrei", search: ["ffm","frankfurt"] },
+    { name: "Wiesbaden",         ars: "06414", level: "kreisfrei", search: ["wi"] },
+    { name: "Kassel",            ars: "06611", level: "kreisfrei", search: ["ks"] },
+    { name: "Darmstadt",         ars: "06411", level: "kreisfrei", search: ["da"] },
+    // ─── KREISFREIE STÄDTE – weitere Bundesländer ──────────────
+    { name: "Hannover (Region)", ars: "03241", level: "kreis",      search: ["hannover","h"] },
+    { name: "Braunschweig",      ars: "03101", level: "kreisfrei",  search: ["bs"] },
+    { name: "Dresden",           ars: "14612", level: "kreisfrei",  search: ["dd"] },
+    { name: "Leipzig",           ars: "14713", level: "kreisfrei",  search: ["l"] },
+    { name: "Chemnitz",          ars: "14511", level: "kreisfrei",  search: ["c"] },
+    { name: "Magdeburg",         ars: "15003", level: "kreisfrei",  search: ["md"] },
+    { name: "Halle (Saale)",     ars: "15002", level: "kreisfrei",  search: ["hal"] },
+    { name: "Erfurt",            ars: "16051", level: "kreisfrei",  search: ["ef"] },
+    { name: "Potsdam",           ars: "12054", level: "kreisfrei",  search: ["p"] },
+    { name: "Rostock",           ars: "13003", level: "kreisfrei",  search: ["hro"] },
+    { name: "Schwerin",          ars: "13004", level: "kreisfrei",  search: [] },
+    { name: "Kiel",              ars: "01002", level: "kreisfrei",  search: [] },
+    { name: "Lübeck",            ars: "01003", level: "kreisfrei",  search: ["hl"] },
+    { name: "Saarbrücken",       ars: "10041", level: "kreisfrei",  search: ["sb"] },
+    { name: "Mainz",             ars: "07315", level: "kreisfrei",  search: ["mz"] },
+    { name: "Koblenz",           ars: "07111", level: "kreisfrei",  search: ["ko"] },
+    { name: "Trier",             ars: "07211", level: "kreisfrei",  search: ["tr"] },
 ];
 
 // ============================================================
@@ -1181,7 +1252,7 @@ function renderDropdown(results) {
     const dd = document.getElementById('arsDropdown');
     activeIndex = -1;
     if (!results.length) {
-        dd.innerHTML = '<div class="ars-no-results">Keine Treffer – weitere Gemeinden auf Anfrage: <a href="mailto:hallo@amtsschimmel.ai">hallo@amtsschimmel.ai</a></div>';
+        dd.innerHTML = '<div class="ars-no-results">Nicht gefunden – ARS-Code direkt eingeben oder schreiben: <a href="mailto:kontakt@amtsschimmel.ai">kontakt@amtsschimmel.ai</a></div>';
         dd.classList.add('open');
         return;
     }
