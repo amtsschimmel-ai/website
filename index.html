@@ -1097,6 +1097,9 @@ function onArsFocus() {
     onArsInput();
 }
 
+// Daten frühzeitig laden – sobald die Seite fertig ist (nicht erst on focus)
+window.addEventListener('load', () => setTimeout(() => ensureArsData(), 600));
+
 // ============================================================
 // MASTERPROMPT (vollständiger Text)
 // ============================================================
@@ -1180,7 +1183,16 @@ function normalizeStr(s) {
 function onArsInput() {
     const q = document.getElementById('arsSearchInput').value.trim();
     if (q.length < 2) { closeDropdown(); return; }
+    if (!_arsLoaded) {
+        // Kurzer Lade-Hinweis zeigen, dann Ergebnis nachliefern
+        const dd = document.getElementById('arsDropdown');
+        dd.innerHTML = '<div class="ars-no-results">⏳ Gemeindeliste wird geladen…</div>';
+        dd.classList.add('open');
+    }
     ensureArsData().then(() => {
+        // Nur rendern wenn Input noch dem gesuchten Begriff entspricht
+        const current = document.getElementById('arsSearchInput').value.trim();
+        if (current !== q) return;
         const qn = normalizeStr(q);
         currentResults = ARS_DATA.filter(e =>
             normalizeStr(e.name).includes(qn) || e.ars.startsWith(q)
