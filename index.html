@@ -941,7 +941,7 @@
                             type="text"
                             id="arsSearchInput"
                             class="ars-input"
-                            placeholder='Suchen: z. B. "Aichelb", "Bad Boll", "Göppingen"…'
+                            placeholder='Suchen: z. B. "Aichelberg", "Bad Boll", "Göppingen"…'
                             autocomplete="off"
                             oninput="onArsInput()"
                             onkeydown="onArsKeydown(event)"
@@ -960,6 +960,10 @@
                     <div class="url-row">
                         <div class="url-box" id="generatedUrl">https://mcp.amtsschimmel.ai/mcp</div>
                         <button class="copy-btn" id="copyBtn" onclick="copyUrl()"><svg class="icon" aria-hidden="true"><use href="#icon-clipboard-list"/></svg> <span id="copyBtnText">Link kopieren</span></button>
+                    </div>
+                    <div style="margin-top:8px; display:flex; align-items:center; gap:8px">
+                        <input type="checkbox" id="leanModeCheckbox" onchange="updateUrl()">
+                        <label for="leanModeCheckbox" style="font-size:0.85rem; color:var(--text-secondary); cursor:pointer">Bitte anklicken für Lean-Mode (Server ohne Funktion für Freitext-Suche)</label>
                     </div>
                     
                     <div class="search-tip">
@@ -1483,7 +1487,8 @@ document.addEventListener('click', (e) => {
 // URL GENERATOR
 // ============================================================
 function updateUrl() {
-    const base = 'https://mcp.amtsschimmel.ai/mcp';
+    const lean = document.getElementById('leanModeCheckbox') && document.getElementById('leanModeCheckbox').checked;
+    const base = lean ? 'https://mcp-lean.amtsschimmel.ai/mcp' : 'https://mcp.amtsschimmel.ai/mcp';
     const url = selectedArs ? base + '?geo=' + encodeURIComponent(selectedArs.ars) : base;
     const el = document.getElementById('generatedUrl');
     el.textContent = url;
